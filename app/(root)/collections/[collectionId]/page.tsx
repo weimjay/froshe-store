@@ -2,6 +2,7 @@ import ProductCard from "@/components/ProductCard";
 import { getCollectionDetails } from "@/lib/actions/actions";
 import Image from "next/image";
 import React from "react";
+import useWishlist from "@/lib/hooks/useWishlist";
 
 const CollectionDetails = async ({
   params,
@@ -9,6 +10,7 @@ const CollectionDetails = async ({
   params: { collectionId: string };
 }) => {
   const collectionDetails = await getCollectionDetails(params.collectionId);
+  const wishlist = await useWishlist();
 
   return (
     <div className="px-10 py-5 flex flex-col items-center gap-8">
@@ -23,7 +25,7 @@ const CollectionDetails = async ({
       <p className="text-body-normal text-grey-2 text-center max-w-[900px]">{collectionDetails.description}</p>
       <div className="flex flex-wrap gap-16 justify-center">
         {collectionDetails.products.map((product: ProductType) => (
-          <ProductCard key={product._id} product={product} />
+          <ProductCard key={product._id} product={product} liked={wishlist.includes(product._id)} />
         ))}
       </div>
     </div>
