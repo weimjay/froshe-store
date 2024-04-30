@@ -7,7 +7,7 @@ import { CircleUserRound, Menu, Search, ShoppingCart } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { useState } from "react";
+import React, { useState } from "react";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -17,6 +17,12 @@ const Navbar = () => {
 
   const [dropdownMenu, setDropdownMenu] = useState(false);
   const [query, setQuery] = useState("");
+
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === 'Enter' && query.trim() !== '') {
+      router.push(`/search/${query}`);
+    }
+  };
 
   return (
     <div className="sticky top-0 z-10 py-4 px-10 flex gap-2 justify-between items-center bg-white max-sm:px-2">
@@ -57,6 +63,7 @@ const Navbar = () => {
           placeholder="Search..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
+          onKeyDown={handleKeyDown}
         />
         <button
           disabled={query === ""}
