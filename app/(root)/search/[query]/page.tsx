@@ -14,7 +14,7 @@ const SearchPage = async ({ params }: { params: { query: string }}) => {
       {!searchedProducts || searchedProducts.length === 0 && (
         <p>No results found.</p>
       )}
-      <div className='flex flex-wrap justify-between gap-16'>
+      <div className='flex flex-wrap gap-16'>
         {searchedProducts?.map((product: ProductType) => (
           <ProductCard key={product._id} product={product} liked={wishlist.includes(product._id)} />
         ))}
