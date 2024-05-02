@@ -6,30 +6,30 @@ const Footer = () => {
                     <div className="flex gap-8 md:gap-12 lg:gap-28 mb-6 md:mb-0 lg:mb-0 text-[14px]">
                         <div className="flex flex-col gap-1">
                             <p className="text-base-bold text-gray-200 mb-4">Categories</p>
-                            <span>Women</span>
-                            <span>Men</span>
-                            <span>Shoes</span>
-                            <span>Accessories</span>
-                            <span>New Arrivals</span>
+                            <a className="hover:text-white" href="#">Women</a>
+                            <a className="hover:text-white" href="">Men</a>
+                            <a className="hover:text-white" href="">Shoes</a>
+                            <a className="hover:text-white" href="">Accessories</a>
+                            <a className="hover:text-white" href="">New Arrivals</a>
                         </div>
                         <div className="flex flex-col gap-1">
                             <p className="text-base-bold text-gray-200 mb-4">Support</p>
-                            <span>FAQ</span>
-                            <span>Stores</span>
-                            <span>Delivery</span>
-                            <span>Click & Collect</span>
-                            <span>Returns & Refunds</span>
-                            <span>Gift Cards</span>
-                            <span>Product Ideas</span>
+                            <a className="hover:text-white" href="">FAQ</a>
+                            <a className="hover:text-white" href="">Stores</a>
+                            <a className="hover:text-white" href="">Delivery</a>
+                            <a className="hover:text-white" href="">Click & Collect</a>
+                            <a className="hover:text-white" href="">Returns & Refunds</a>
+                            <a className="hover:text-white" href="">Gift Cards</a>
+                            <a className="hover:text-white" href="">Product Ideas</a>
                         </div>
                         <div className="flex flex-col gap-1">
                             <p className="text-base-bold text-gray-200 mb-4">Links</p>
-                            <span>Company</span>
-                            <span>Careers</span>
-                            <span>Customer Notices</span>
-                            <span>Partnerships</span>
-                            <span>Terms & Conditions</span>
-                            <span>Privacy Policy</span>
+                            <a className="hover:text-white" href="">Company</a>
+                            <a className="hover:text-white" href="">Careers</a>
+                            <a className="hover:text-white" href="">Customer Notices</a>
+                            <a className="hover:text-white" href="">Partnerships</a>
+                            <a className="hover:text-white" href="">Terms & Conditions</a>
+                            <a className="hover:text-white" href="">Privacy Policy</a>
                         </div>
                     </div>
                     <div className="flex flex-col items-center">
